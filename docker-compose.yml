@@ -1,0 +1,9 @@
+version: "2"
+services:
+  collectd:
+    build: .
+    privileged: true
+    extra_hosts:
+      - logstash:${LOGSTASH_IP}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
