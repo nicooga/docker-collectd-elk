@@ -16,6 +16,7 @@ RUN ( \
 )
 
 COPY collectd.conf /etc/collectd/collectd.conf
+COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/usr/sbin/collectd", "-f"]
+ENTRYPOINT ["/entrypoint.sh"]
 
