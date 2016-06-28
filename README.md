@@ -14,3 +14,5 @@ the commands below to deploy the `collectd-elk` container.
 
 Here the network name to be defined in `LOGSTASH_NETWORK` would be `dockerelk_logstash` by default. Use 
 `docker network ls` to find out the exact name.
+
+NOTE: If you have a hostname specified with hyphens (`-`), the hostname will be modified to remove them. For example, if hostname is `api-01`, the `host` field in index entries will be `api01`
