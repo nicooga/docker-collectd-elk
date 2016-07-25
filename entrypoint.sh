@@ -18,6 +18,8 @@ sed -i -e "s/# @COLLECTD_INTERVAL_SECONDS@/Interval $COLLECTD_INTERVAL_SECONDS/g
 if [ ! -d /mnt/oldproc -a -d /host/proc ]; then
     umount /proc
     mount -o bind /host/proc /proc
+    mkdir -p /mnt/oldproc
+    mount -t proc none /mnt/oldproc
 fi
 
 if [ -z "$@" ]; then
