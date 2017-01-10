@@ -4,7 +4,7 @@ RUN ( \
     set -eux; \
     export DEBIAN_FRONTEND=noninteractive; \
 
-    DOCKER_PLUGIN_URL=https://codeload.github.com/signalfx/docker-collectd-plugin/tar.gz/1e4ada70a52ca374b82d8c5222c8919c297e69fb; \
+    DOCKER_PLUGIN_URL=https://codeload.github.com/signalfx/docker-collectd-plugin/tar.gz/4454b92f7083ace85dddd583b3697e5e71ad23a7; \
 
     # add jessie-backports for latest version of collectd
     echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list; \
