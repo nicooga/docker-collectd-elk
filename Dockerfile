@@ -20,6 +20,7 @@ RUN ( \
 )
 
 COPY collectd.conf /etc/collectd/collectd.conf
+COPY plugins.d /etc/collectd/plugins.d
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
